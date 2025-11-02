@@ -8,10 +8,11 @@ import autoComponents from 'unplugin-vue-components/vite'
 interface Options {
   appDirUrl: string
   tailwind?: boolean
+  router?: boolean
 }
 
 export function createViteConfig(options: Options): UserConfig {
-  const { appDirUrl, tailwind = true } = options
+  const { appDirUrl, tailwind = true, router = true } = options
   const srcPath = fileURLToPath(new URL('./src', appDirUrl))
   const config: UserConfig = {
     plugins: [
@@ -20,6 +21,7 @@ export function createViteConfig(options: Options): UserConfig {
         imports: [
           'vue',
           '@vueuse/core',
+          ...(router ? ['vue-router'] as const : []),
         ],
         dts: `${srcPath}/types/auto-imports.d.ts`,
       }),

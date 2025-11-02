@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "@vueuse/core": "catalog:",
-    "vue": "catalog:"
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   },
   "devDependencies": {
     "@repo/tailwind-config": "workspace:*",
