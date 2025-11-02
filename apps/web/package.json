@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@vueuse/core": "catalog:",
+    "nprogress": "catalog:",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
@@ -26,6 +27,7 @@
     "@repo/vite-config": "workspace:*",
     "@tsconfig/node22": "catalog:",
     "@types/node": "catalog:",
+    "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
     "eslint": "catalog:",
