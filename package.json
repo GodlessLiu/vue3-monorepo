@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "dev": "pnpm --filter @repo/web dev",
+    "build": "pnpm --filter @repo/web build",
     "preinstall": "husky",
     "cz": "git-cz"
   },
