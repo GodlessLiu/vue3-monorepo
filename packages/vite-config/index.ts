@@ -23,6 +23,10 @@ export function createViteConfig(options: Options): UserConfig {
           '@vueuse/core',
           ...(router ? ['vue-router'] as const : []),
         ],
+        dirs: [
+          `${srcPath}/composables`,
+          `${srcPath}/stores`,
+        ],
         dts: `${srcPath}/types/auto-imports.d.ts`,
       }),
       autoComponents({

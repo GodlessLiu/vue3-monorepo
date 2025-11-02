@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@vueuse/core": "catalog:",
+    "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },
