@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import autoImport from 'unplugin-auto-import/vite'
 import autoComponents from 'unplugin-vue-components/vite'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 interface Options {
   appDirUrl: string
@@ -35,6 +36,7 @@ export function createViteConfig(options: Options): UserConfig {
         ],
         dts: `${srcPath}/types/components.d.ts`,
       }),
+      vueDevTools(),
     ],
     resolve: {
       alias: {
