@@ -1,12 +1,11 @@
-import { createPinia } from 'pinia'
+import type { UserModule } from './types'
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
 import '@repo/tailwind-config'
 
 const app = createApp(App)
-const pinia = createPinia()
 
-app.use(pinia)
-app.use(router)
+Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))
+  .forEach(i => i.install?.({ app }))
+
 app.mount('#app')
