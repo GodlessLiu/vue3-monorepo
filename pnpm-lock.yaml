@@ -5,7 +5,44 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
-  default:
+  build:
+    '@iconify/json':
+      specifier: ^2.2.402
+      version: 2.2.402
+    '@iconify/tailwind4':
+      specifier: ^1.0.6
+      version: 1.0.6
+    '@tailwindcss/vite':
+      specifier: ^4.1.16
+      version: 4.1.16
+    '@vitejs/plugin-vue':
+      specifier: ^6.0.1
+      version: 6.0.1
+    jiti:
+      specifier: ^2.4.2
+      version: 2.6.1
+    npm-run-all2:
+      specifier: ^8.0.4
+      version: 8.0.4
+    tailwindcss:
+      specifier: 4.1.16
+      version: 4.1.16
+    unplugin-auto-import:
+      specifier: ^20.2.0
+      version: 20.2.0
+    unplugin-vue-components:
+      specifier: ^30.0.0
+      version: 30.0.0
+    vite:
+      specifier: ^7.0.6
+      version: 7.1.12
+    vite-plugin-beasties:
+      specifier: ^0.3.5
+      version: 0.3.5
+    vite-plugin-vue-devtools:
+      specifier: ^8.0.3
+      version: 8.0.3
+  dev:
     '@antfu/eslint-config':
       specifier: ^6.2.0
       version: 6.2.0
@@ -15,27 +52,6 @@ catalogs:
     '@commitlint/config-conventional':
       specifier: ^20.0.0
       version: 20.0.0
-    '@iconify/json':
-      specifier: ^2.2.402
-      version: 2.2.402
-    '@iconify/tailwind4':
-      specifier: ^1.0.6
-      version: 1.0.6
-    '@tsconfig/node22':
-      specifier: ^22.0.2
-      version: 22.0.2
-    '@types/node':
-      specifier: 22.18.13
-      version: 22.18.13
-    '@vitejs/plugin-vue':
-      specifier: ^6.0.1
-      version: 6.0.1
-    '@vue/tsconfig':
-      specifier: ^0.7.0
-      version: 0.7.0
-    '@vueuse/core':
-      specifier: ^14.0.0
-      version: 14.0.0
     commitizen:
       specifier: ^4.3.1
       version: 4.3.1
@@ -51,97 +67,93 @@ catalogs:
     husky:
       specifier: ^9.1.7
       version: 9.1.7
-    jiti:
-      specifier: ^2.4.2
-      version: 2.6.1
     lint-staged:
       specifier: ^16.2.6
       version: 16.2.6
-    npm-run-all2:
-      specifier: ^8.0.4
-      version: 8.0.4
+    typescript:
+      specifier: 5.8.3
+      version: 5.8.3
+    vue-tsc:
+      specifier: ^3.0.4
+      version: 3.1.2
+  frontend:
+    '@vueuse/core':
+      specifier: ^14.0.0
+      version: 14.0.0
     nprogress:
       specifier: ^0.2.0
       version: 0.2.0
     pinia:
       specifier: ^3.0.3
       version: 3.0.3
-    tailwindcss:
-      specifier: 4.1.16
-      version: 4.1.16
-    typescript:
-      specifier: 5.8.3
-      version: 5.8.3
-    unplugin-auto-import:
-      specifier: ^20.2.0
-      version: 20.2.0
-    unplugin-vue-components:
-      specifier: ^30.0.0
-      version: 30.0.0
-    vite:
-      specifier: ^7.0.6
-      version: 7.1.12
     vue:
       specifier: ^3.5.18
       version: 3.5.22
     vue-router:
       specifier: ^4.6.3
       version: 4.6.3
-    vue-tsc:
-      specifier: ^3.0.4
-      version: 3.1.2
+  types:
+    '@tsconfig/node22':
+      specifier: ^22.0.2
+      version: 22.0.2
+    '@types/node':
+      specifier: 22.18.13
+      version: 22.18.13
+    '@vue/tsconfig':
+      specifier: ^0.7.0
+      version: 0.7.0
 
 importers:
 
   .:
     devDependencies:
       '@commitlint/cli':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 20.1.0(@types/node@22.18.13)(typescript@5.9.3)
       '@commitlint/config-conventional':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 20.0.0
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 22.18.13
       commitizen:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.3.1(@types/node@22.18.13)(typescript@5.9.3)
       commitlint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 20.1.0(@types/node@22.18.13)(typescript@5.9.3)
       cz-git:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 1.12.0
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.39.0(jiti@2.6.1)
       husky:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.1.7
       lint-staged:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 16.2.6
 
   apps/web:
     dependencies:
       '@vueuse/core':
-        specifier: 'catalog:'
+        specifier: catalog:frontend
         version: 14.0.0(vue@3.5.22(typescript@5.8.3))
       nprogress:
-        specifier: 'catalog:'
+        specifier: catalog:frontend
         version: 0.2.0
       pinia:
-        specifier: 'catalog:'
+        specifier: catalog:frontend
         version: 3.0.3(typescript@5.8.3)(vue@3.5.22(typescript@5.8.3))
       vue:
-        specifier: 'catalog:'
+        specifier: catalog:frontend
         version: 3.5.22(typescript@5.8.3)
       vue-router:
-        specifier: 'catalog:'
+        specifier: catalog:frontend
         version: 4.6.3(vue@3.5.22(typescript@5.8.3))
     devDependencies:
       '@repo/tailwind-config':
@@ -154,101 +166,104 @@ importers:
         specifier: workspace:*
         version: link:../../packages/vite-config
       '@tsconfig/node22':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 22.0.2
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 22.18.13
       '@types/nprogress':
         specifier: ^0.2.3
         version: 0.2.3
       '@vitejs/plugin-vue':
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 6.0.1(vite@7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1))(vue@3.5.22(typescript@5.8.3))
       '@vue/tsconfig':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 0.7.0(typescript@5.8.3)(vue@3.5.22(typescript@5.8.3))
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.39.0(jiti@2.6.1)
       jiti:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 2.6.1
       npm-run-all2:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 8.0.4
       tailwindcss:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 4.1.16
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.8.3
       vite:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1)
       vue-tsc:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 3.1.2(typescript@5.8.3)
 
   packages/eslint-config:
     devDependencies:
       '@antfu/eslint-config':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 6.2.0(@vue/compiler-sfc@3.5.22)(eslint@9.39.0(jiti@2.6.1))(typescript@5.8.3)
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.8.3
 
   packages/tailwind-config:
     devDependencies:
       '@iconify/json':
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 2.2.402
       '@iconify/tailwind4':
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 1.0.6(tailwindcss@4.1.16)
       tailwindcss:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 4.1.16
 
   packages/tsconfig:
     devDependencies:
       '@tsconfig/node22':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 22.0.2
       '@vue/tsconfig':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 0.7.0(typescript@5.9.3)(vue@3.5.22(typescript@5.9.3))
 
   packages/vite-config:
     dependencies:
       '@tailwindcss/vite':
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 4.1.16(vite@7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1))
       '@vitejs/plugin-vue':
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 6.0.1(vite@7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1))(vue@3.5.22(typescript@5.8.3))
       vite:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1)
     devDependencies:
       '@repo/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 22.18.13
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.8.3
       unplugin-auto-import:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 20.2.0(@vueuse/core@14.0.0(vue@3.5.22(typescript@5.8.3)))
       unplugin-vue-components:
-        specifier: 'catalog:'
+        specifier: catalog:build
         version: 30.0.0(@babel/parser@7.28.5)(vue@3.5.22(typescript@5.8.3))
+      vite-plugin-beasties:
+        specifier: catalog:build
+        version: 0.3.5
       vite-plugin-vue-devtools:
-        specifier: ^8.0.3
+        specifier: catalog:build
         version: 8.0.3(vite@7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1))(vue@3.5.22(typescript@5.8.3))
 
 packages:
@@ -1351,6 +1366,10 @@ packages:
     resolution: {integrity: sha512-/tk9kky/d8T8CTXIQYASLyhAxR5VwL3zct1oAoVTaOUHwrmsGnfbRwNdEq+vOl2BN8i3PcDdP0o4Q+jjKQoFbQ==}
     hasBin: true
 
+  beasties@0.3.5:
+    resolution: {integrity: sha512-NaWu+f4YrJxEttJSm16AzMIFtVldCvaJ68b1L098KpqXmxt9xOLtKoLkKxb8ekhOrLqEJAbvT6n6SEvB/sac7A==}
+    engines: {node: '>=14.0.0'}
+
   birpc@2.6.1:
     resolution: {integrity: sha512-LPnFhlDpdSH6FJhJyn4M0kFO7vtQ5iPw24FnG0y21q09xC7e8+1LeR31S1MAIrDAHp4m7aas4bEkTDTvMAtebQ==}
 
@@ -1558,6 +1577,13 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
+  css-select@6.0.0:
+    resolution: {integrity: sha512-rZZVSLle8v0+EY8QAkDWrKhpgt6SA5OtHsgBnsj6ZaLb5dmDVOWUDtQitd9ydxxvEjhewNudS6eTVU7uOyzvXw==}
+
+  css-what@7.0.0:
+    resolution: {integrity: sha512-wD5oz5xibMOPHzy13CyGmogB3phdvcDaB5t0W/Nr5Z2O/agcB8YwOz6e2Lsp10pNDzBoDO9nVa3RGs/2BttpHQ==}
+    engines: {node: '>= 6'}
+
   cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
@@ -1634,6 +1660,19 @@ packages:
     resolution: {integrity: sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
 
+  dom-serializer@2.0.0:
+    resolution: {integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==}
+
+  domelementtype@2.3.0:
+    resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
+
+  domhandler@5.0.3:
+    resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
+    engines: {node: '>= 4'}
+
+  domutils@3.2.2:
+    resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
+
   dot-prop@5.3.0:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
@@ -1657,6 +1696,10 @@ packages:
 
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
+    engines: {node: '>=0.12'}
+
+  entities@6.0.1:
+    resolution: {integrity: sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==}
     engines: {node: '>=0.12'}
 
   env-paths@2.2.1:
@@ -2081,6 +2124,9 @@ packages:
 
   html-entities@2.6.0:
     resolution: {integrity: sha512-kig+rMn/QOVRvr7c86gQ8lWXq+Hkv6CbAH1hLu+RG338StTpE8Z0b44SDVaqVu7HGKf27frdmUYEs9hTUX/cLQ==}
+
+  htmlparser2@10.0.0:
+    resolution: {integrity: sha512-TwAZM+zE5Tq3lrEHvOlvwgj1XLWQCtaaibSN11Q+gGBAS7Y1uZSWwXXRe4iF6OXnaq1riyQAPFOBtYc77Mxq0g==}
 
   husky@9.1.7:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
@@ -2802,6 +2848,9 @@ packages:
   pnpm-workspace-yaml@1.3.0:
     resolution: {integrity: sha512-Krb5q8Totd5mVuLx7we+EFHq/AfxA75nbfTm25Q1pIf606+RlaKUG+PXH8SDihfe5b5k4H09gE+sL47L1t5lbw==}
 
+  postcss-media-query-parser@0.2.3:
+    resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
+
   postcss-selector-parser@6.1.2:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
@@ -3201,6 +3250,10 @@ packages:
     resolution: {integrity: sha512-7SpgZmU7R+dDnSmvXE1mfDtnHLHQSisdySVR7lO8ceAXvM0otZeuQQ6C8LrS5d/aYyP/QZ0hI0L+dIPrm4YlFQ==}
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0 || ^6.0.0-0 || ^7.0.0-0
+
+  vite-plugin-beasties@0.3.5:
+    resolution: {integrity: sha512-C4o1BflJDAD1MZvOpzs8WiBjZWjQpmhRe2DeEYok/oFeiIJnDm/husr23CXVEMMkSAVmiPYC38sp4BYVKvj2zA==}
+    engines: {node: '>=14.0.0'}
 
   vite-plugin-inspect@11.3.3:
     resolution: {integrity: sha512-u2eV5La99oHoYPHE6UvbwgEqKKOQGz86wMg40CCosP6q8BkB6e5xPneZfYagK4ojPJSj5anHCrnvC20DpwVdRA==}
@@ -4517,6 +4570,17 @@ snapshots:
 
   baseline-browser-mapping@2.8.22: {}
 
+  beasties@0.3.5:
+    dependencies:
+      css-select: 6.0.0
+      css-what: 7.0.0
+      dom-serializer: 2.0.0
+      domhandler: 5.0.3
+      htmlparser2: 10.0.0
+      picocolors: 1.1.1
+      postcss: 8.5.6
+      postcss-media-query-parser: 0.2.3
+
   birpc@2.6.1: {}
 
   bl@4.1.0:
@@ -4729,6 +4793,16 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+  css-select@6.0.0:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 7.0.0
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      nth-check: 2.1.1
+
+  css-what@7.0.0: {}
+
   cssesc@3.0.0: {}
 
   csstype@3.1.3: {}
@@ -4790,6 +4864,24 @@ snapshots:
 
   diff-sequences@27.5.1: {}
 
+  dom-serializer@2.0.0:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      entities: 4.5.0
+
+  domelementtype@2.3.0: {}
+
+  domhandler@5.0.3:
+    dependencies:
+      domelementtype: 2.3.0
+
+  domutils@3.2.2:
+    dependencies:
+      dom-serializer: 2.0.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+
   dot-prop@5.3.0:
     dependencies:
       is-obj: 2.0.0
@@ -4808,6 +4900,8 @@ snapshots:
       tapable: 2.3.0
 
   entities@4.5.0: {}
+
+  entities@6.0.1: {}
 
   env-paths@2.2.1: {}
 
@@ -5319,6 +5413,13 @@ snapshots:
   hookable@5.5.3: {}
 
   html-entities@2.6.0: {}
+
+  htmlparser2@10.0.0:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      entities: 6.0.1
 
   husky@9.1.7: {}
 
@@ -6135,6 +6236,8 @@ snapshots:
     dependencies:
       yaml: 2.8.1
 
+  postcss-media-query-parser@0.2.3: {}
+
   postcss-selector-parser@6.1.2:
     dependencies:
       cssesc: 3.0.0
@@ -6525,6 +6628,10 @@ snapshots:
   vite-hot-client@2.1.0(vite@7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1)):
     dependencies:
       vite: 7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1)
+
+  vite-plugin-beasties@0.3.5:
+    dependencies:
+      beasties: 0.3.5
 
   vite-plugin-inspect@11.3.3(vite@7.1.12(@types/node@22.18.13)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1)):
     dependencies:

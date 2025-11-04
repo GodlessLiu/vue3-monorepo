@@ -5,7 +5,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@tsconfig/node22": "catalog:",
-    "@vue/tsconfig": "catalog:"
+    "@tsconfig/node22": "catalog:types",
+    "@vue/tsconfig": "catalog:types"
   }
 }

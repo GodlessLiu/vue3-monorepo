@@ -18,16 +18,16 @@
     "cz": "git-cz"
   },
   "devDependencies": {
-    "@commitlint/cli": "catalog:",
-    "@commitlint/config-conventional": "catalog:",
+    "@commitlint/cli": "catalog:dev",
+    "@commitlint/config-conventional": "catalog:dev",
     "@repo/eslint-config": "workspace:*",
-    "@types/node": "catalog:",
-    "commitizen": "catalog:",
-    "commitlint": "catalog:",
-    "cz-git": "catalog:",
-    "eslint": "catalog:",
-    "husky": "catalog:",
-    "lint-staged": "catalog:"
+    "@types/node": "catalog:types",
+    "commitizen": "catalog:dev",
+    "commitlint": "catalog:dev",
+    "cz-git": "catalog:dev",
+    "eslint": "catalog:dev",
+    "husky": "catalog:dev",
+    "lint-staged": "catalog:dev"
   },
   "lint-staged": {
     "{apps/**/*.{ts,vue,js},packages/**/*.{ts,vue,js}}": [

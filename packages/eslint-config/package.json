@@ -15,7 +15,7 @@
     ".": "./common.js"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "typescript": "catalog:"
+    "@antfu/eslint-config": "catalog:dev",
+    "typescript": "catalog:dev"
   }
 }

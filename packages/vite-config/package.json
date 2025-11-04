@@ -8,16 +8,17 @@
     ".": "./index.ts"
   },
   "peerDependencies": {
-    "@tailwindcss/vite": "catalog:",
-    "@vitejs/plugin-vue": "catalog:",
-    "vite": "catalog:"
+    "@tailwindcss/vite": "catalog:build",
+    "@vitejs/plugin-vue": "catalog:build",
+    "vite": "catalog:build"
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
-    "@types/node": "catalog:",
-    "typescript": "catalog:",
-    "unplugin-auto-import": "catalog:",
-    "unplugin-vue-components": "catalog:",
-    "vite-plugin-vue-devtools": "catalog:"
+    "@types/node": "catalog:types",
+    "typescript": "catalog:dev",
+    "unplugin-auto-import": "catalog:build",
+    "unplugin-vue-components": "catalog:build",
+    "vite-plugin-beasties": "catalog:build",
+    "vite-plugin-vue-devtools": "catalog:build"
   }
 }

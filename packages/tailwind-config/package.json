@@ -7,8 +7,8 @@
     ".": "./tailwind.css"
   },
   "devDependencies": {
-    "@iconify/json": "catalog:",
-    "@iconify/tailwind4": "catalog:",
-    "tailwindcss": "catalog:"
+    "@iconify/json": "catalog:build",
+    "@iconify/tailwind4": "catalog:build",
+    "tailwindcss": "catalog:build"
   }
 }

@@ -15,27 +15,27 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@vueuse/core": "catalog:",
-    "nprogress": "catalog:",
-    "pinia": "catalog:",
-    "vue": "catalog:",
-    "vue-router": "catalog:"
+    "@vueuse/core": "catalog:frontend",
+    "nprogress": "catalog:frontend",
+    "pinia": "catalog:frontend",
+    "vue": "catalog:frontend",
+    "vue-router": "catalog:frontend"
   },
   "devDependencies": {
     "@repo/tailwind-config": "workspace:*",
     "@repo/tsconfig": "workspace:*",
     "@repo/vite-config": "workspace:*",
-    "@tsconfig/node22": "catalog:",
-    "@types/node": "catalog:",
+    "@tsconfig/node22": "catalog:types",
+    "@types/node": "catalog:types",
     "@types/nprogress": "^0.2.3",
-    "@vitejs/plugin-vue": "catalog:",
-    "@vue/tsconfig": "catalog:",
-    "eslint": "catalog:",
-    "jiti": "catalog:",
-    "npm-run-all2": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:",
-    "vue-tsc": "catalog:"
+    "@vitejs/plugin-vue": "catalog:build",
+    "@vue/tsconfig": "catalog:types",
+    "eslint": "catalog:dev",
+    "jiti": "catalog:build",
+    "npm-run-all2": "catalog:build",
+    "tailwindcss": "catalog:build",
+    "typescript": "catalog:dev",
+    "vite": "catalog:build",
+    "vue-tsc": "catalog:dev"
   }
 }
