@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import autoImport from 'unplugin-auto-import/vite'
 import autoComponents from 'unplugin-vue-components/vite'
+import { beasties } from 'vite-plugin-beasties'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 interface Options {
@@ -37,6 +38,7 @@ export function createViteConfig(options: Options): UserConfig {
         dts: `${srcPath}/types/components.d.ts`,
       }),
       vueDevTools(),
+      beasties(),
     ],
     resolve: {
       alias: {
