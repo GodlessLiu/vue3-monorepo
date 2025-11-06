@@ -5,7 +5,15 @@
   "private": true,
   "packageManager": "pnpm@10.20.0",
   "exports": {
-    ".": "./index.ts"
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
   },
   "peerDependencies": {
     "@tailwindcss/vite": "catalog:build",
