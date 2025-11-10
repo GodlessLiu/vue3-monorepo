@@ -5,4 +5,7 @@ export default antfu({
   typescript: true,
 }, {
   files: ['**/*.{js,ts,vue}'],
+  rules: {
+    'ts/consistent-type-definitions': 'off',
+  },
 })

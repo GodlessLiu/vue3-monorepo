@@ -27,7 +27,7 @@
     "@repo/vite-config": "workspace:*",
     "@tsconfig/node22": "catalog:types",
     "@types/node": "catalog:types",
-    "@types/nprogress": "^0.2.3",
+    "@types/nprogress": "catalog:types",
     "@vitejs/plugin-vue": "catalog:build",
     "@vue/tsconfig": "catalog:types",
     "eslint": "catalog:dev",

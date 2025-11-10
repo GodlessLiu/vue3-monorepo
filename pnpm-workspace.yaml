@@ -40,4 +40,5 @@ catalogs:
   types:
     '@tsconfig/node22': ^22.0.2
     '@types/node': 22.18.13
+    '@types/nprogress': ^0.2.3
     '@vue/tsconfig': ^0.7.0

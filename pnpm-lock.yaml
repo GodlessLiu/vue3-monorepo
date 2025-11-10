@@ -143,6 +143,9 @@ importers:
       '@vueuse/core':
         specifier: catalog:frontend
         version: 14.0.0(vue@3.5.22(typescript@5.8.3))
+      mitt:
+        specifier: ^3.0.1
+        version: 3.0.1
       nprogress:
         specifier: catalog:frontend
         version: 0.2.0
